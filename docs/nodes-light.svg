@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="296" viewBox="0 0 840 296" role="img"><title>ros2 node graph for the slam rc car</title><style>
+svg{font-size:13px} text{font-family:SFMono-Regular, ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace;fill:#1f2328}
+.t{fill:#1f2328} .m{fill:#59636e} .f{fill:#8c959f} .a{fill:#8250df} .h{fill:#cf222e}
+.box{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
+.abox{fill:#f4efff;stroke:#c8b5f5;stroke-width:1}
+.hbox{fill:#ffebe9;stroke:#cf222e;stroke-width:1}
+.obox{fill:none;stroke:#d0d7de;stroke-width:1}
+.dash{fill:none;stroke:#d0d7de;stroke-width:1;stroke-dasharray:4 4}
+.ln{fill:none;stroke:#59636e;stroke-width:1.5}
+.al{fill:none;stroke:#8250df;stroke-width:1.75}
+.hl{fill:none;stroke:#cf222e;stroke-width:1.75}
+.fl{fill:none;stroke:#8c959f;stroke-width:1}
+.gl{fill:none;stroke:#eaeef2;stroke-width:1}
+.dashed{stroke-dasharray:5 4}
+.mk{fill:#59636e} .mka{fill:#8250df} .mkh{fill:#cf222e}
+.fill-a{fill:#8250df} .fill-m{fill:#59636e} .fill-f{fill:#8c959f} .fill-fg{fill:#1f2328}
+.fill-line{fill:#d0d7de} .fill-panel{fill:#f6f8fa}
+.s1{fill:#2a78d6} .s2{fill:#eb6834} .s3{fill:#1baf7a} .s4{fill:#eda100}
+.q1{fill:#d8cbfb} .q2{fill:#ae92f2} .q3{fill:#8250df}
+.edge{fill:none;stroke:#8c959f;stroke-width:1;stroke-opacity:.45}
+.ring{stroke:#f6f8fa;stroke-width:2}
+</style><defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" class="mk"/></marker>
+<marker id="ara" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" class="mka"/></marker>
+<marker id="arh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L10,5 L0,9 z" class="mkh"/></marker>
+</defs><rect x="10.0" y="20.0" width="180.0" height="50.0" rx="6" class="box"/><text x="100.0" y="42.0" class="t" text-anchor="middle" font-size="13" font-weight="600">rplidar a1</text><text x="100.0" y="58.0" class="m" text-anchor="middle" font-size="11.5">/scan · 5–10 hz</text><rect x="10.0" y="90.0" width="180.0" height="50.0" rx="6" class="box"/><text x="100.0" y="112.0" class="t" text-anchor="middle" font-size="13" font-weight="600">bno055 imu</text><text x="100.0" y="128.0" class="m" text-anchor="middle" font-size="11.5">/imu · 50 hz</text><rect x="10.0" y="182.0" width="180.0" height="50.0" rx="6" class="box"/><text x="100.0" y="204.0" class="t" text-anchor="middle" font-size="13" font-weight="600">pi camera v3</text><text x="100.0" y="220.0" class="m" text-anchor="middle" font-size="11.5">/camera/image_raw</text><rect x="250.0" y="34.0" width="190.0" height="84.0" rx="6" class="abox"/><text x="345.0" y="73.0" class="a" text-anchor="middle" font-size="13" font-weight="600">cartographer</text><text x="345.0" y="89.0" class="m" text-anchor="middle" font-size="11.5">2d slam, lidar + imu</text><text x="345.0" y="103.0" class="m" text-anchor="middle" font-size="11.5">/map · map→odom tf</text><rect x="250.0" y="176.0" width="190.0" height="62.0" rx="6" class="box"/><text x="345.0" y="204.0" class="t" text-anchor="middle" font-size="13" font-weight="600">apriltag node</text><text x="345.0" y="220.0" class="m" text-anchor="middle" font-size="11.5">pnp pose from corners</text><text x="345.0" y="234.0" class="m" text-anchor="middle" font-size="11.5">/landmarks</text><rect x="520.0" y="34.0" width="190.0" height="84.0" rx="6" class="box"/><text x="615.0" y="73.0" class="t" text-anchor="middle" font-size="13" font-weight="600">a* planner</text><text x="615.0" y="89.0" class="m" text-anchor="middle" font-size="11.5">0.2 m obstacle inflation</text><text x="615.0" y="103.0" class="m" text-anchor="middle" font-size="11.5">10 hz control loop</text><rect x="520.0" y="176.0" width="190.0" height="62.0" rx="6" class="box"/><text x="615.0" y="204.0" class="t" text-anchor="middle" font-size="13" font-weight="600">motor controller</text><text x="615.0" y="220.0" class="m" text-anchor="middle" font-size="11.5">lgpio pwm · 50 hz</text><text x="615.0" y="234.0" class="m" text-anchor="middle" font-size="11.5">0.5 s watchdog</text><rect x="730.0" y="182.0" width="100.0" height="50.0" rx="6" class="box"/><text x="780.0" y="211.5" class="t" text-anchor="middle" font-size="13" font-weight="600">esc + servo</text><path d="M190.0,45.0 L222.0,45.0 L222.0,62.0 L248.0,62.0" class="ln" marker-end="url(#ar)"/><path d="M190.0,115.0 L222.0,115.0 L222.0,94.0 L248.0,94.0" class="ln" marker-end="url(#ar)"/><path d="M190.0,207.0 L248.0,207.0" class="ln" marker-end="url(#ar)"/><path d="M345.0,176.0 L345.0,120.0" class="al" marker-end="url(#ara)"/><text x="353.0" y="152.0" class="a" text-anchor="start" font-size="11.5">loop closure</text><path d="M440.0,76.0 L518.0,76.0" class="ln" marker-end="url(#ar)"/><text x="479.0" y="68.0" class="m" text-anchor="middle" font-size="11">/map, tf</text><path d="M615.0,118.0 L615.0,174.0" class="ln" marker-end="url(#ar)"/><text x="623.0" y="150.0" class="m" text-anchor="start" font-size="11.5">/cmd_vel</text><path d="M710.0,207.0 L728.0,207.0" class="ln" marker-end="url(#ar)"/><text x="10.0" y="280.0" class="m" text-anchor="start" font-size="12">route: start → checkpoint 1 → checkpoint 2 → treasure → finish, with a sound at each tag</text></svg>
